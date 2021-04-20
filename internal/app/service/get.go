@@ -3,7 +3,7 @@ package service
 import (
 	"log"
 
-	web_broker "github.com/vlslav/web-broker/pkg/web-broker"
+	web_broker "github.com/emorikvendy/web-broker/pkg/web-broker"
 )
 
 func (s *Service) Get(req *web_broker.GetValueReq) (*web_broker.GetValueResp, error) {

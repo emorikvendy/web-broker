@@ -1,14 +1,14 @@
-package repository
+package file
 
 import (
-	"github.com/vlslav/web-broker/internal/pkg/model"
+	"github.com/emorikvendy/web-broker/internal/pkg/model"
 )
 
 type FileRepo struct {
 	fileName string
 }
 
-func NewFileRepo(fileName string) *FileRepo {
+func New(fileName string) *FileRepo {
 	return &FileRepo{fileName: fileName}
 }
 

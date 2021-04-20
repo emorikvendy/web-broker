@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"github.com/emorikvendy/web-broker/internal/pkg/repository/file"
 	"log"
 	"net"
 	"net/http"
@@ -11,10 +12,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/vlslav/web-broker/internal/app/endpoint"
+	"github.com/emorikvendy/web-broker/internal/app/endpoint"
 
-	"github.com/vlslav/web-broker/internal/app/service"
-	"github.com/vlslav/web-broker/internal/pkg/repository"
+	"github.com/emorikvendy/web-broker/internal/app/service"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 	storageName := flag.String("storage", "storage.json", "data storage")
 	shutdownTimeout := flag.Int64("shutdown_timeout", 3, "shutdown timeout")
 
-	repo := repository.NewFileRepo(*storageName)
+	repo := file.New(*storageName)
 	svc := service.New(repo)
 
 	serv := http.Server{

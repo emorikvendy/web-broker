@@ -1,10 +1,10 @@
-package repository
+package postgres
 
-import "github.com/vlslav/web-broker/internal/pkg/model"
+import "github.com/emorikvendy/web-broker/internal/pkg/model"
 
 type PgRepo struct{}
 
-func NewPgRepo() *PgRepo {
+func New() *PgRepo {
 	return &PgRepo{}
 }
 
