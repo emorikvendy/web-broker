@@ -1,5 +1,5 @@
-module github.com/vlslav/web-broker
+module github.com/emorikvendy/web-broker
 
-go 1.15
+go 1.16
 
 require github.com/gorilla/mux v1.8.0
